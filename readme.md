@@ -1,6 +1,7 @@
 # westerpark-heren-14
 > A static website that is build with Nunjucks, PostCSS, and Rollup. The data comes from DatoCMS and it's hosted on Netlify.
 
+The [site](westerpark-heren-14.netlify.com) is viewable [here](westerpark-heren-14.netlify.com)!
 
 ## Build Setup
 Add an .env file with the `DATO_API_TOKEN=xxx` to the root of the project. This is needed for the project to get the content from DatoCMS.
