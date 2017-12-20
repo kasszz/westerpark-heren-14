@@ -67,7 +67,7 @@ function renderViewToFile(view, data, slug) {
 }
 
 function renderView (view, data) {
-  return new Promise((resolve, reject) => nunjucks.render(`views/${view}.html`, { data }, (err, html) => {
+  return new Promise((resolve, reject) => nunjucks.render(`views/${view}.html`, data, (err, html) => {
     err ? reject(err) : resolve(html)
   }))
 }
