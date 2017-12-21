@@ -1,2 +1,5 @@
 :root {
+  --color-shamrock: #2ECC71;
+
+  --primary-color: var(--color-shamrock);
 }
