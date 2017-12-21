@@ -1,0 +1,5 @@
+{%- macro icon(name) %}
+<span role="presentation" class="icon icon-{{ name }}">
+  {% include './svgs/' + name + '.svg' ignore missing %}
+</span>
+{% endmacro -%}
