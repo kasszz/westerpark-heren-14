@@ -1,0 +1,14 @@
+.site-menu {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  color: white;
+}
+
+.site-menu__toggle {
+}
+
+.site-menu__toggle .icon {
+  width: 1em;
+  height: 1em;
+}

@@ -1,5 +1,9 @@
 @import '../core/core.css';
 
 .site-header {
-  padding: 8px;
+  position: relative;
+  padding: 16px;
+  background-color: var(--background-color);
+  border-bottom: 1px solid var(--border-color);
+  color: white;
 }

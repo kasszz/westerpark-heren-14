@@ -1,2 +1,7 @@
 :root {
+  --color-shark: #22272A;
+  --color-outer-space: #2D3235;
+
+  --background-color: var(--color-shark);
+  --border-color: var(--color-outer-space);
 }
