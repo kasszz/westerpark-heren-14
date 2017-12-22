@@ -1,5 +1,9 @@
 :root {
+  --color-shark: #22272A;
+  --color-outer-space: #2D3235;
   --color-shamrock: #2ECC71;
 
+  --background-color: var(--color-shark);
+  --border-color: var(--color-outer-space);
   --primary-color: var(--color-shamrock);
 }

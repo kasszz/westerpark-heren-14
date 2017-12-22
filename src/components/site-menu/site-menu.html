@@ -1,0 +1,13 @@
+{% from '../icon/icon.html' import icon %}
+
+<div class="site-menu" data-site-menu>
+  <a class="site-menu__toggle site-menu__toggle--menu" data-site-menu-toggle href="#site-header">{{ icon('menu') }}</a>
+  <a class="site-menu__toggle site-menu__toggle--close" data-site-menu-toggle href="#">{{ icon('close') }}</a>
+  <nav class="site-menu__menu">
+    <ul>
+      <a class="site-menu__item{% if urlLevels.length == 0 %} site-menu__item--active{% endif %}" href="{{ baseUrl }}"><li>Home</li></a>
+      <a class="site-menu__item{% if urlLevels[0] == 'matches' %} site-menu__item--active{% endif %}" href="{{ baseUrl }}matches/"><li>Matches</li></a>
+      <a class="site-menu__item{% if urlLevels[0] == 'players' %} site-menu__item--active{% endif %}" href="{{ baseUrl }}players/"><li>Players</li></a>
+    </ul>
+  </nav>
+</div>

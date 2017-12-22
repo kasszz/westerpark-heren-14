@@ -60,7 +60,8 @@ function formatMatchSlug (match) {
 function renderViewToFile(view, data, slug) {
   const baseUrl = slug ? `${path.relative(slug, './')}/` : './'
   const dirName = slug ? slug + '/' : ''
-  Object.assign(data, { baseUrl })
+  const urlLevels = slug ? slug.split('/') : []
+  Object.assign(data, { baseUrl, urlLevels })
 
   return renderView(view, data)
     .then(html => fse.outputFile(`${outputDir}/${dirName}index.html`, html))
