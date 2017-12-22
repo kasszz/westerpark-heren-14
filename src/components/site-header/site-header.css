@@ -5,9 +5,9 @@
   padding: 16px;
   background-color: var(--background-color);
   border-bottom: 1px solid var(--border-color);
-  color: white;
 }
 
 .site-header__title {
   display: inline-block;
+  color: var(--font-primary-color);
 }

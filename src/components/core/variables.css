@@ -2,10 +2,12 @@
   --color-shark: #22272A;
   --color-outer-space: #2D3235;
   --color-rolling-stone: #7D7F80;
+  --color-white: #FFFFFF;
   --color-shamrock: #2ECC71;
 
   --background-color: var(--color-shark);
   --border-color: var(--color-outer-space);
   --primary-color: var(--color-shamrock);
+  --font-primary-color: var(--color-white);
   --font-secondary-color: var(--color-rolling-stone);
 }
