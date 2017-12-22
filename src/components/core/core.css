@@ -6,3 +6,14 @@ body {
   font-family: Roboto, sans-serif;
   background-color: var(--background-color);
 }
+
+a {
+  color: white;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: var(--primary-color);
+}
