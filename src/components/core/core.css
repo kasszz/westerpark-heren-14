@@ -27,3 +27,11 @@ a:hover,
 a:focus {
   color: var(--primary-color);
 }
+
+.a11y-only {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
