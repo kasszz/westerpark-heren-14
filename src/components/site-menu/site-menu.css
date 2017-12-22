@@ -1,14 +1,50 @@
-.site-menu {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  color: white;
-}
+@import '../core/core.css';
 
-.site-menu__toggle {
+.site-menu {
+  float: right;
+  color: white;
 }
 
 .site-menu__toggle .icon {
   width: 1em;
   height: 1em;
+}
+
+.site-menu__toggle--close {
+  display: none;
+}
+
+.site-menu__menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 1px);
+  left: 0;
+  width: 100%;
+  background-color: var(--background-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.site-menu__item {
+  display: block;
+  padding: 16px;
+  text-align: center;
+}
+
+.site-menu__item--active {
+  color: var(--primary-color);
+}
+
+.site-menu--open .site-menu__toggle--menu,
+#site-header:target .site-menu__toggle--menu {
+  display: none;
+}
+
+.site-menu--open .site-menu__toggle--close,
+#site-header:target .site-menu__toggle--close {
+  display: block;
+}
+
+.site-menu--open .site-menu__menu,
+#site-header:target .site-menu__menu {
+  display: block;
 }
