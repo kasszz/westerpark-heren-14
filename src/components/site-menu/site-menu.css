@@ -17,6 +17,7 @@
 .site-menu__menu {
   display: none;
   position: absolute;
+  /* 1px for the border of the parent */
   top: calc(100% + 1px);
   left: 0;
   width: 100%;
