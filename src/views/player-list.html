@@ -1,0 +1,12 @@
+{% extends 'views/_base.html' %}
+{% from '../components/player-card/player-card.html' import playerCard %}
+
+{% block content %}
+<ul>
+  {% for player in players %}
+  <li>
+    {{ playerCard(player) }}
+  </li>
+  {% endfor %}
+</ul>
+{% endblock %}

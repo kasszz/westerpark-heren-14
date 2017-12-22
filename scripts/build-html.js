@@ -4,6 +4,7 @@ const path = require('path')
 const nunjucks = require('nunjucks')
 const dataLoader = require('../lib/data-loader')
 const dateFormatter = require('../lib/date-formatter')
+const nameFormatter = require('../lib/name-formatter')
 
 const rootDir = path.join(__dirname, '..')
 const inputDir = 'src'
@@ -11,14 +12,20 @@ const outputDir = path.join(__dirname, '..', 'dist')
 const playersSlug = 'players/'
 const matchesSlug = 'matches/'
 
-nunjucks.configure(inputDir, { watch: false })
+const env = new nunjucks.Environment(new nunjucks.FileSystemLoader(inputDir))
+
+env.addFilter('fullName', nameFormatter.fullName)
+env.addFilter('firstName', nameFormatter.firstName)
+env.addFilter('surname', nameFormatter.surname)
+env.addFilter('initials', nameFormatter.initials)
+env.addFilter('dateFormatter', dateFormatter)
 
 dataLoader.load().then(renderAll)
 
 function renderAll (data) {
   return Promise.all([
     renderHome(data),
-    renderPlayersOverview(data),
+    renderPlayerList(data),
     renderPlayers(data),
     renderMatchesOverview(data),
     renderMatches(data)
@@ -31,8 +38,8 @@ function renderHome (data) {
   return renderViewToFile('home', data)
 }
 
-function renderPlayersOverview (data) {
-  return renderViewToFile('players-overview', data, playersSlug)
+function renderPlayerList (data) {
+  return renderViewToFile('player-list', data, playersSlug)
 }
 
 function renderPlayers (data) {
@@ -68,7 +75,7 @@ function renderViewToFile(view, data, slug) {
 }
 
 function renderView (view, data) {
-  return new Promise((resolve, reject) => nunjucks.render(`views/${view}.html`, data, (err, html) => {
+  return new Promise((resolve, reject) => env.render(`views/${view}.html`, data, (err, html) => {
     err ? reject(err) : resolve(html)
   }))
 }
