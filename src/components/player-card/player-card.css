@@ -1,0 +1,54 @@
+@import '../core/core.css';
+
+.player-card {
+  display: block;
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  overflow: auto;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.player-card:hover .player-card__initials {
+  color: var(--font-secondary-color);
+}
+
+.player-card__avatar {
+  display: inline-table;
+  padding: 2px;
+  width: 64px;
+  height: 64px;
+  border: 1px solid var(--border-color);
+  border-radius: 100%;
+  float: left;
+}
+
+.player-card__avatar img {
+  width: 100%;
+  border-radius: 100%;
+}
+
+.player-card__initials {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  color: var(--font-secondary-color);
+}
+
+.player-card__meta {
+  display: inline-block;
+  margin-left: 16px;
+}
+
+.player-card__name,
+.player-card__birthday {
+  display: block;
+}
+
+.player-card__name {
+  margin-bottom: 8px;
+}
+
+.player-card__birthday {
+  color: var(--font-secondary-color);
+}

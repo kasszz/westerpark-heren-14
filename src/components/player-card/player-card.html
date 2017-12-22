@@ -1,0 +1,19 @@
+{% macro playerCard(player) %}
+<a class="player-card" href="./{{ player.slug }}">
+  <div class="player-card__avatar">
+    {% if player.avatar %}
+    <img src="{{ player.avatar.url }}" alt="" rule="presentation">
+    {% else %}
+    <span class="player-card__initials">{{ player.name | initials }}</span>
+    {% endif %}
+  </div>
+  <div class="player-card__meta">
+    <span class="player-card__name">{{ player.name | fullName }}</span>
+    {% if player.birthday %}
+    <span class="player-card__birthday">{{ player.birthday | dateFormatter }}</span>
+    {% else %}
+    <span class="player-card__birthday">{{ '01-01-1000' }}</span>
+    {% endif %}
+  </div>
+</a>
+{% endmacro %}
