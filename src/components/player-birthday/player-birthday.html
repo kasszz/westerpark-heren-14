@@ -1,0 +1,7 @@
+{% macro playerBirthday(player) %}
+{% if player.birthday %}
+<span class="player-birthday">{{ player.birthday | dateFormatter }}</span>
+{% else %}
+<span class="player-birthday">{{ '01-01-1000' }}</span>
+{% endif %}
+{% endmacro %}

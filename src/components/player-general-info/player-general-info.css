@@ -1,0 +1,16 @@
+.player-general-info {
+  padding: 16px;
+  text-align: center;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.player-general-info__title {
+  font-size: 2em;
+  margin-bottom: 16px;
+}
+
+.player-general-info .player-avatar {
+  width: 128px;
+  height: 128px;
+  margin-bottom: 16px;
+}

@@ -1,0 +1,6 @@
+@import '../core/core.css';
+
+.player-birthday {
+  display: block;
+  color: var(--font-secondary-color);
+}

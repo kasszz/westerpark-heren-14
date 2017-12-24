@@ -44,7 +44,8 @@ function renderPlayerList (data) {
 
 function renderPlayers (data) {
   return Promise.all(data.players.map(player => {
-    return renderViewToFile('player', player, `${playersSlug}${player.slug}`)
+    Object.assign(data, { player })
+    return renderViewToFile('player', data, `${playersSlug}${player.slug}`)
   }))
 }
 
