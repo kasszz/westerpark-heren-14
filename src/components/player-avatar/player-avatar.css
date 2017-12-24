@@ -1,0 +1,23 @@
+@import '../core/core.css';
+
+.player-avatar {
+  display: inline-table;
+  padding: 4px;
+  width: 64px;
+  height: 64px;
+  border: 1px solid var(--border-color);
+  border-radius: 100%;
+}
+
+.player-avatar img {
+  display: block;
+  width: 100%;
+  border-radius: 100%;
+}
+
+.player-avatar__initials {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  color: var(--font-secondary-color);
+}
