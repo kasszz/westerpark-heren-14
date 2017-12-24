@@ -1,15 +1,12 @@
 {% from '../player-avatar/player-avatar.html' import playerAvatar %}
+{% from '../player-birthday/player-birthday.html' import playerBirthday %}
 
 {% macro playerCard(player) %}
 <a class="player-card" href="./{{ player.slug }}">
   {{ playerAvatar(player) }}
   <div class="player-card__meta">
     <span class="player-card__name">{{ player.name | fullName }}</span>
-    {% if player.birthday %}
-    <span class="player-card__birthday">{{ player.birthday | dateFormatter }}</span>
-    {% else %}
-    <span class="player-card__birthday">{{ '01-01-1000' }}</span>
-    {% endif %}
+    {{ playerBirthday(player) }}
   </div>
 </a>
 {% endmacro %}

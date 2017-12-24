@@ -1,5 +1,6 @@
 {% extends 'views/_base.html' %}
+{% from '../components/player-general-info/player-general-info.html' import playerGeneralInfo %}
 
 {% block content %}
-<p>player</p>
+{{ playerGeneralInfo(player) }}
 {% endblock %}

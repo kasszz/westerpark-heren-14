@@ -14,15 +14,10 @@
   margin-left: 16px;
 }
 
-.player-card__name,
-.player-card__birthday {
+.player-card__name {
   display: block;
 }
 
 .player-card__name {
   margin-bottom: 8px;
-}
-
-.player-card__birthday {
-  color: var(--font-secondary-color);
 }
