@@ -1,12 +1,8 @@
+{% from '../player-avatar/player-avatar.html' import playerAvatar %}
+
 {% macro playerCard(player) %}
 <a class="player-card" href="./{{ player.slug }}">
-  <div class="player-card__avatar">
-    {% if player.avatar %}
-    <img src="{{ player.avatar.url }}" alt="" rule="presentation">
-    {% else %}
-    <span class="player-card__initials">{{ player.name | initials }}</span>
-    {% endif %}
-  </div>
+  {{ playerAvatar(player) }}
   <div class="player-card__meta">
     <span class="player-card__name">{{ player.name | fullName }}</span>
     {% if player.birthday %}
