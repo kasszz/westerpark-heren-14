@@ -1,0 +1,8 @@
+{% from '../stat-block/stat-block.html' import statBlock %}
+
+<section class="player-stats">
+  <h3 class="player-stats__title">Stats</h3>
+  <div>
+    {{- statBlock(player.beerCardDonations, 'Bierpas') -}}
+  </div>
+</section>

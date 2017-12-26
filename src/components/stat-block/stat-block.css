@@ -1,0 +1,18 @@
+@import '../core/core.css';
+
+.stat-block {
+  text-align: center;
+}
+
+.stat-block__number {
+  display: block;
+  font-family: Din, sans-serif;
+  font-size: 4em;
+  margin-bottom: 8px;
+}
+
+.stat-block__label {
+  display: block;
+  color: var(--font-secondary-color);
+  text-transform: uppercase;
+}
