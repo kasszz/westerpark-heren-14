@@ -1,7 +1,6 @@
 {% extends 'views/_base.html' %}
-{% from '../components/player-general-info/player-general-info.html' import playerGeneralInfo %}
-{% from '../components/player-stats/player-stats.html' import playerStats %}
 
 {% block content %}
-{{ playerGeneralInfo(player) }}
+{% include '../components/player-general-info/player-general-info.html' %}
+{% include '../components/player-stats/player-stats.html' %}
 {% endblock %}

@@ -1,10 +1,8 @@
 {% from '../player-avatar/player-avatar.html' import playerAvatar %}
 {% from '../player-birthday/player-birthday.html' import playerBirthday %}
 
-{% macro playerGeneralInfo(player) %}
 <div class="player-general-info">
   <h2 class="player-general-info__title">{{ player.name | fullName }}</h2>
   {{ playerAvatar(player) }}
   {{ playerBirthday(player) }}
 </div>
-{% endmacro %}

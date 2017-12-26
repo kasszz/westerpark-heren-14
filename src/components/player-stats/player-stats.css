@@ -1,0 +1,28 @@
+@import '../core/core.css';
+
+:root {
+  --player-stats-gutter: 16px;
+}
+
+.player-stats {
+  padding: 16px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.player-stats__title {
+  display: inline-block;
+  padding-bottom: 8px;
+  padding-right: 4px;
+  margin-bottom: 16px;
+  border-bottom: 3px solid var(--font-primary-color);
+  font-size: 1.25em;
+}
+
+.player-stats .stat-block {
+  display: inline-block;
+  width: calc(50% - (var(--player-stats-gutter) / 2));
+}
+
+.player-stats .stat-block:nth-of-type(even) {
+  margin-left: var(--player-stats-gutter);
+}
