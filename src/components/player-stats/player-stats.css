@@ -5,7 +5,9 @@
 }
 
 .player-stats {
-  padding: 16px;
+  padding-top: 16px;
+  padding-right: 16px;
+  padding-left: 16px;
   border-bottom: 1px solid var(--border-color);
 }
 
@@ -21,6 +23,7 @@
 .player-stats .stat-block {
   display: inline-block;
   width: calc(50% - (var(--player-stats-gutter) / 2));
+  margin-bottom: 16px;
 }
 
 .player-stats .stat-block:nth-of-type(even) {
