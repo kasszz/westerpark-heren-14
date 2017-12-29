@@ -1,6 +1,6 @@
 {%- macro statBlock(number, label) -%}
 <article class="stat-block">
-  <span class="stat-block__number">{{ number or 0 }}</span>
+  <span class="stat-block__number">{{ number | round(2) or 0 }}</span>
   <span class="stat-block__label">{{ label }}</span>
 </article>
 {%- endmacro -%}
