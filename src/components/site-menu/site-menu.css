@@ -1,7 +1,24 @@
 @import '../core/core.css';
+@import '../site-header/site-header.css';
 
 .site-menu {
   float: right;
+}
+
+.site-menu__background {
+  display: none;
+  position: fixed;
+  top: var(--site-header-height);
+  left: 0;
+  width: 100%;
+  height: calc(100% - var(--site-header-height));
+  background: black;
+  opacity: 0.4;
+}
+
+.site-menu--open .site-menu__background,
+#site-header:target .site-menu__background {
+  display: block;
 }
 
 .site-menu__toggle .icon {
@@ -11,27 +28,6 @@
 
 .site-menu__toggle--close {
   display: none;
-}
-
-.site-menu__menu {
-  display: none;
-  position: absolute;
-  /* 1px for the border of the parent */
-  top: calc(100% + 1px);
-  left: 0;
-  width: 100%;
-  background-color: var(--background-color);
-  border-bottom: 1px solid var(--border-color);
-}
-
-.site-menu__item {
-  display: block;
-  padding: 16px;
-  text-align: center;
-}
-
-.site-menu__item--active {
-  color: var(--primary-color);
 }
 
 .site-menu--open .site-menu__toggle--menu,
@@ -44,7 +40,28 @@
   display: block;
 }
 
+.site-menu__menu {
+  display: none;
+  position: fixed;
+  /* 1px for the border of the parent */
+  top: var(--site-header-height);
+  left: 0;
+  width: 100%;
+  background-color: var(--background-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
 .site-menu--open .site-menu__menu,
 #site-header:target .site-menu__menu {
   display: block;
+}
+
+.site-menu__item {
+  display: block;
+  padding: 16px;
+  text-align: center;
+}
+
+.site-menu__item--active {
+  color: var(--primary-color);
 }

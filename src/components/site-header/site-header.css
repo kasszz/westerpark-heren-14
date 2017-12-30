@@ -1,7 +1,16 @@
 @import '../core/core.css';
 
+:root {
+  --site-header-height: 51px;
+}
+
 #site-header {
-  position: relative;
+  padding-bottom: var(--site-header-height);
+}
+
+.site-header__content {
+  position: fixed;
+  width: 100%;
   padding: 16px;
   background-color: var(--background-color);
   border-bottom: 1px solid var(--border-color);
