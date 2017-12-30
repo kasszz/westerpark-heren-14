@@ -8,7 +8,7 @@
   display: block;
   font-family: Din, sans-serif;
   font-size: 4em;
-  /* The Din font has whitespace around it. The margin-top / margin-bottom are to remove it. */
+  /* The Din font has whitespace around it. The margin-top are to remove it. */
   margin-top: -9px;
 }
 
