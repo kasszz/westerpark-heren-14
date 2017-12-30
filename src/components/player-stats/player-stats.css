@@ -15,7 +15,7 @@
   display: inline-block;
   padding-bottom: 8px;
   padding-right: 4px;
-  margin-bottom: 16px;
+  margin-bottom: 32px;
   border-bottom: 3px solid var(--font-primary-color);
   font-size: 1.25em;
 }
@@ -23,7 +23,7 @@
 .player-stats .stat-block {
   display: inline-block;
   width: calc(50% - (var(--player-stats-gutter) / 2));
-  margin-bottom: 16px;
+  margin-bottom: 32px;
 }
 
 .player-stats .stat-block:nth-of-type(even) {
