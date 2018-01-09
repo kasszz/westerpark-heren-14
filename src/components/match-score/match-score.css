@@ -1,0 +1,14 @@
+@import '../core/core.css';
+
+.match-score {
+  font-family: Din, sans-serif;
+  font-size: 2em;
+}
+
+.match-score__wp {
+  color: var(--primary-color);
+}
+
+.match-score__opponent {
+
+}

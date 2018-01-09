@@ -1,0 +1,21 @@
+{% macro matchScore(match) %}
+<div class="match-score">
+    {% if match.awayGame == false %}
+    <span class="match-score__wp">
+      3
+    </span>
+    -
+    <span class="match-score__opponent">
+      4
+    </span>
+    {% else %}
+    <span class="match-score__opponent">
+      4
+    </span>
+    -
+    <span class="match-score__wp">
+      3
+    </span>
+    {% endif %}
+  </div>
+{% endmacro %}
