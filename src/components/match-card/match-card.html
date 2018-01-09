@@ -5,6 +5,7 @@
     <span class="match-card__date">{{match.date | dateFormatter}}</span>
   </div>
   <div class="match-card__score">
+    {% if match.awayGame == false %}
     <span>
       3
     </span>
@@ -12,6 +13,15 @@
     <span>
       4
     </span>
+    {% else %}
+    <span>
+      4
+    </span>
+    -
+    <span>
+      3
+    </span>
+    {% endif %}
   </div>
 </a>
 {% endmacro %}
