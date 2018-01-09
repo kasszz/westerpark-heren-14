@@ -1,0 +1,8 @@
+{% macro matchCard(match) %}
+<a class="match-card" href="./{{match.date}}/{{match.opponent | slugFormatter}}">
+  <div class="match-card__meta">
+    <h3 class="match-card__title">{{match.opponent}}</h3>
+    <span class="match-card__date">{{match.date | dateFormatter}}</span>
+  </div>
+</a>
+{% endmacro %}
