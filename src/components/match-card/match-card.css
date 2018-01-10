@@ -1,0 +1,26 @@
+@import '../core/core.css';
+
+.match-card {
+  display: block;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.match-card__meta {
+  display: inline-block;
+}
+
+.match-card__title {
+  margin-bottom: 8px;
+}
+
+.match-card__date {
+  color: var(--font-secondary-color);
+}
+
+.match-card .match-score {
+  float: right;
+}

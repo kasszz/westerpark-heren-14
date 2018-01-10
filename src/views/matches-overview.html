@@ -1,5 +1,13 @@
 {% extends 'views/_base.html' %}
+{% from '../components/match-card/match-card.html' import matchCard %}
 
 {% block content %}
-<p>Wedstrijden overzicht</p>
+<h2 class="a11y-only">Wedstrijden overzicht</h2>
+<ul>
+  {% for match in matches %}
+  <li>
+    {{ matchCard(match) }}
+  </li>
+  {% endfor %}
+</ul>
 {% endblock %}
