@@ -5,7 +5,7 @@
 <a class="player-card" href="./{{ player.slug }}">
   {{ playerAvatar(player) }}
   <div class="player-card__meta">
-    <span class="player-card__name">{{ player.name | fullName }}</span>
+    <h3 class="player-card__name">{{ player.name | fullName }}</h3>
     {{ playerBirthday(player) }}
   </div>
 </a>
