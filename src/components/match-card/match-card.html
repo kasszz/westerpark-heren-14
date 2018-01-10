@@ -1,7 +1,7 @@
 {% from '../match-score/match-score.html' import matchScore %}
 
 {% macro matchCard(match) %}
-<a class="match-card" href="./{{match.date | dateFormatter}}/{{match.opponent | slugFormatter}}">
+<a class="match-card" href="./{{ match.date | dateFormatter }} / {{ match.opponent | slugFormatter }}">
   <div class="match-card__meta">
     <h3 class="match-card__title">{{match.opponent}}</h3>
     <span class="match-card__date">{{match.date | dateFormatter}}</span>
