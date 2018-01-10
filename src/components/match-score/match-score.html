@@ -2,19 +2,19 @@
 <div class="match-score">
     {% if match.awayGame == false %}
     <span class="match-score__wp">
-      3
+      {{goalSplitter(match, false).length}}
     </span>
     -
     <span>
-      4
+      {{goalSplitter(match, true).length}}
     </span>
     {% else %}
     <span>
-      4
+      {{goalSplitter(match, true).length}}
     </span>
     -
     <span class="match-score__wp">
-      3
+      {{goalSplitter(match, false).length}}
     </span>
     {% endif %}
   </div>

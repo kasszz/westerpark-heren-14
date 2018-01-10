@@ -6,6 +6,7 @@ const dataLoader = require('../lib/data-loader')
 const dateFormatter = require('../lib/date-formatter')
 const nameFormatter = require('../lib/name-formatter')
 const slugFormatter = require('../lib/slug-formatter')
+const goalSplitter = require('../lib/goal-splitter')
 
 const rootDir = path.join(__dirname, '..')
 const inputDir = 'src'
@@ -21,6 +22,8 @@ env.addFilter('surname', nameFormatter.surname)
 env.addFilter('initials', nameFormatter.initials)
 env.addFilter('dateFormatter', dateFormatter)
 env.addFilter('slugFormatter', slugFormatter)
+
+env.addGlobal('goalSplitter', goalSplitter)
 
 dataLoader.load().then(renderAll)
 
