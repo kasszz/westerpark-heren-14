@@ -1,6 +1,6 @@
 @import '../core/core.css';
 
-.match-card {
+.match-list-item {
   display: block;
   display: flex;
   justify-content: space-between;
@@ -9,18 +9,29 @@
   border-bottom: 1px solid var(--border-color);
 }
 
-.match-card__meta {
+.match-list-item__meta {
   display: inline-block;
 }
 
-.match-card__title {
+.match-list-item__title {
   margin-bottom: 8px;
 }
 
-.match-card__date {
+.match-list-item__date {
   color: var(--font-secondary-color);
 }
 
-.match-card .match-score {
+.match-list-item .match-score {
   float: right;
 }
+
+.match-score {
+  font-family: Din, sans-serif;
+  font-size: 2em;
+  color: var(--font-primary-color);
+}
+
+.match-score__wp {
+  color: var(--primary-color);
+}
+

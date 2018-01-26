@@ -1,12 +1,12 @@
 {% extends 'views/_base.html' %}
-{% from '../components/player-card/player-card.html' import playerCard %}
+{% from '../components/player-list-item/player-list-item.html' import playerListItem %}
 
 {% block content %}
 <h2 class="a11y-only">Spelerslijst</h2>
 <ul>
   {% for player in players %}
   <li>
-    {{ playerCard(player) }}
+    {{ playerListItem(player) }}
   </li>
   {% endfor %}
 </ul>

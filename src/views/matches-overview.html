@@ -1,12 +1,12 @@
 {% extends 'views/_base.html' %}
-{% from '../components/match-card/match-card.html' import matchCard %}
+{% from '../components/match-list-item/match-list-item.html' import matchListItem %}
 
 {% block content %}
 <h2 class="a11y-only">Wedstrijden overzicht</h2>
 <ul>
   {% for match in matches %}
   <li>
-    {{ matchCard(match) }}
+    {{ matchListItem(match) }}
   </li>
   {% endfor %}
 </ul>

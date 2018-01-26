@@ -1,7 +1,7 @@
 {% from '../player-avatar/player-avatar.html' import playerAvatar %}
 {% from '../player-birthday/player-birthday.html' import playerBirthday %}
 
-{% macro playerCard(player) %}
+{% macro playerListItem(player) %}
 <a class="player-card" href="./{{ player.slug }}">
   {{ playerAvatar(player) }}
   <div class="player-card__meta">
