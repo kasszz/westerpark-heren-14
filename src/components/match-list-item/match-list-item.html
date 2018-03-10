@@ -1,31 +1,13 @@
+{% from '../match-score/match-score.html' import matchScore %}
+
 {% macro matchListItem(match) %}
 <a class="match-list-item" href="./{{ match.date | dateFormatter }}/{{ match.opponent | slugFormatter }}">
   <div class="match-list-item__meta">
     <h3 class="match-list-item__title">{{match.opponent}}</h3>
     <span class="match-list-item__date">{{match.date | dateFormatter}}</span>
   </div>
-  {{ matchScore(match) }}
-</a>
-{% endmacro %}
-
-{% macro matchScore(match) %}
-<div class="match-score">
-    {% if match.awayGame == false %}
-    <span class="match-score__wp">
-      {{goalSplitter(match, false).length}}
-    </span>
-    -
-    <span>
-      {{goalSplitter(match, true).length}}
-    </span>
-    {% else %}
-    <span>
-      {{goalSplitter(match, true).length}}
-    </span>
-    -
-    <span class="match-score__wp">
-      {{goalSplitter(match, false).length}}
-    </span>
-    {% endif %}
+  <div class="match-list-item__container">
+    {{ matchScore(match) }}
   </div>
+</a>
 {% endmacro %}

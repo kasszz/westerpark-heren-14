@@ -1,0 +1,35 @@
+@import '../core/core.css';
+
+:root {
+  --match-score-divider-width: 10px;
+}
+
+.match-score {
+  width: 100%;
+  font-family: Din, sans-serif;
+  font-size: 2em;
+  color: var(--font-primary-color);
+}
+
+.match-score__score {
+  display: inline-block;
+  vertical-align: middle;
+  width: calc(50% - (var(--match-score-divider-width) / 2));
+}
+
+.match-score__score--wp {
+  color: var(--primary-color);
+}
+
+.match-score__score--last {
+  text-align: right;
+}
+
+.match-score__divider {
+  display: inline-block;
+  vertical-align: middle;
+  width: var(--match-score-divider-width);
+  height: 3px;
+  background-color: white;
+}
+

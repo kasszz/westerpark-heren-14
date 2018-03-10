@@ -1,0 +1,21 @@
+{% macro matchScore(match) %}
+<div class="match-score">
+    {% if match.awayGame == false %}
+    <span class="match-score__score match-score__score--wp">
+      {{goalSplitter(match, false).length}}
+    </span><!--
+    --><span class="match-score__divider"></span><!--
+    --><span class="match-score__score match-score__score--last">
+      {{goalSplitter(match, true).length}}
+    </span>
+    {% else %}
+    <span class="match-score__score">
+      {{goalSplitter(match, true).length}}
+    </span><!--
+    --><span class="match-score__divider"></span><!--
+    --><span class="match-score__score match-score__score--wp match-score__score--last">
+      {{goalSplitter(match, false).length}}
+    </span>
+    {% endif %}
+  </div>
+{% endmacro %}
