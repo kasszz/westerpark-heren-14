@@ -44,3 +44,13 @@
   right: auto;
   left: 16px;
 }
+
+.match-summary__player-list {
+  padding-top: 16px;
+  border-top: 1px solid var(--border-color);
+}
+
+.match-summary__player-list-title {
+  padding-right: 16px;
+  padding-left: 16px;
+}

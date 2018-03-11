@@ -1,4 +1,5 @@
 {% from '../match-score/match-score.html' import matchScore %}
+{% from '../player-list-item/player-list-item.html' import playerListItem %}
 
 {% macro matchSummary(match) %}
 <div class="match-summary">
@@ -6,6 +7,16 @@
     {{ matchScore(match, true) }}
   </div>
   {{ scorerList(match.goals, match.awayGame) }}
+  <div class="match-summary__player-list">
+    <h3 class="match-summary__player-list-title">Spelerlijst</h3>
+    <ul>
+      {% for player in match.players %}
+      <li>
+        {{ playerListItem(player, true) }}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
 </div>
 {% endmacro %}
 
