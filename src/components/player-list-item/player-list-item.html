@@ -1,11 +1,15 @@
 {% from '../player-avatar/player-avatar.html' import playerAvatar %}
 {% from '../player-birthday/player-birthday.html' import playerBirthday %}
 
-{% macro playerListItem(player) %}
+{% macro playerListItem(player, deep) %}
 <a class="player-card" href="./{{ player.slug }}">
   {{ playerAvatar(player) }}
   <div class="player-card__meta">
+    {% if deep %}
+    <h4 class="player-card__name">{{ player.name | fullName }}</h4>
+    {% else %}
     <h3 class="player-card__name">{{ player.name | fullName }}</h3>
+    {% endif %}
     {{ playerBirthday(player) }}
   </div>
 </a>
