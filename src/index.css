@@ -2,11 +2,12 @@
 @import './components/icon/icon.css';
 @import './components/site-header/site-header.css';
 @import './components/site-menu/site-menu.css';
-@import './components/player-card/player-card.css';
+@import './components/player-list-item/player-list-item.css';
 @import './components/player-avatar/player-avatar.css';
 @import './components/player-birthday/player-birthday.css';
 @import './components/player-general-info/player-general-info.css';
 @import './components/player-stats/player-stats.css';
 @import './components/stat-block/stat-block.css';
-@import './components/match-card/match-card.css';
+@import './components/match-list-item/match-list-item.css';
 @import './components/match-score/match-score.css';
+@import './components/match-summary/match-summary.css';

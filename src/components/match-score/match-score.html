@@ -1,19 +1,19 @@
-{% macro matchScore(match) %}
+{% macro matchScore(match, largeMode) %}
 <div class="match-score">
     {% if match.awayGame == false %}
-    <span class="match-score__wp">
+    <span class="match-score__score match-score__score--wp {% if largeMode %} match-score__score--large {% endif %}">
       {{goalSplitter(match, false).length}}
-    </span>
-    -
-    <span>
+    </span><!--
+    --><span class="match-score__divider {% if largeMode %} match-score__divider--large {% endif %}"></span><!--
+    --><span class="match-score__score match-score__score--last {% if largeMode %} match-score__score--large {% endif %}">
       {{goalSplitter(match, true).length}}
     </span>
     {% else %}
-    <span>
+    <span class="match-score__score {% if largeMode %} match-score__score--large {% endif %}">
       {{goalSplitter(match, true).length}}
-    </span>
-    -
-    <span class="match-score__wp">
+    </span><!--
+    --><span class="match-score__divider {% if largeMode %} match-score__divider--large {% endif %}"></span><!--
+    --><span class="match-score__score match-score__score--wp match-score__score--last {% if largeMode %} match-score__score--large {% endif %}">
       {{goalSplitter(match, false).length}}
     </span>
     {% endif %}

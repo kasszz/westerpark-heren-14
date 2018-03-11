@@ -1,11 +1,46 @@
 @import '../core/core.css';
 
+:root {
+  --match-score-divider-width: 10px;
+  --match-score-divider-width-large: 20px;
+}
+
 .match-score {
+  width: 100%;
   font-family: Din, sans-serif;
-  font-size: 2em;
   color: var(--font-primary-color);
 }
 
-.match-score__wp {
+.match-score__score {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 2em;
+  width: calc(50% - (var(--match-score-divider-width) / 2));
+}
+
+.match-score__score--wp {
   color: var(--primary-color);
 }
+
+.match-score__score--last {
+  text-align: right;
+}
+
+.match-score__score--large {
+  font-size: 4em;
+  width: calc(50% - (var(--match-score-divider-width-large) / 2));
+}
+
+.match-score__divider {
+  display: inline-block;
+  vertical-align: middle;
+  width: var(--match-score-divider-width);
+  height: 3px;
+  background-color: white;
+}
+
+.match-score__divider--large {
+  height: 6px;
+  width: var(--match-score-divider-width-large);
+}
+

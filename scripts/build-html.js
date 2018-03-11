@@ -60,7 +60,7 @@ function renderMatchesOverview (data) {
 
 function renderMatches (data) {
   return Promise.all(data.matches.map(match => {
-    return renderViewToFile('match', match, matchSlugFormatter(match))
+    return renderViewToFile('match', {match}, matchSlugFormatter(match))
   }))
 }
 

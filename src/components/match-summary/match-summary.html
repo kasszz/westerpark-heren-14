@@ -1,0 +1,30 @@
+{% from '../match-score/match-score.html' import matchScore %}
+
+{% macro matchSummary(match) %}
+<div class="match-summary">
+  <div class="match-summary__match-score-container">
+    {{ matchScore(match, true) }}
+  </div>
+  {{ scorerList(match.goals, match.awayGame) }}
+</div>
+{% endmacro %}
+
+{% macro scorerList(goals, awayGame) %}
+<ul class="scorer-list">
+{% for item in goals %}
+  {% if item.player %}
+  <li class="scorer-list__item {% if awayGame %} scorer-list__item--away-team {% endif %}">
+    <a class="scorer-list__item-link {% if awayGame %} scorer-list__item-link--away-team {% endif %}" href="/players/{{item.player.slug}}">
+      {{ item.player.name | fullName }}
+      <span class="scorer-list__time {% if awayGame %} scorer-list__time--away-team {% endif %}">'{{ item.time }}</span>
+    </a>
+  </li>
+  {% else %}
+  <li class="scorer-list__item {% if not awayGame %} scorer-list__item--away-team {% endif %}">
+    Tegenstander
+    <span class="scorer-list__time {% if not awayGame %} scorer-list__time--away-team {% endif %}">'{{ item.time }}</span>
+  </li>
+  {% endif %}
+{% endfor %}
+</ul>
+{% endmacro %}
