@@ -2,7 +2,7 @@
 {% from '../player-birthday/player-birthday.html' import playerBirthday %}
 
 {% macro playerListItem(player, deep) %}
-<a class="player-card" href="./{{ player.slug }}">
+<a class="player-card" href="/players/{{ player.slug }}">
   {{ playerAvatar(player) }}
   <div class="player-card__meta">
     {% if deep %}
