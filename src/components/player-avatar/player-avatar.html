@@ -1,7 +1,7 @@
 {% macro playerAvatar(player) %}
 <div class="player-avatar">
   {% if player.avatar %}
-  <img src="{{ player.avatar.url }}" alt="" rule="presentation">
+  <img src="{{ player.avatar.url }}?max-w=130&amp;max-h=130&amp;fit=crop&amp;auto=format" alt="" rule="presentation">
   {% else %}
   <span class="player-avatar__initials">{{ player.name | initials }}</span>
   {% endif %}
