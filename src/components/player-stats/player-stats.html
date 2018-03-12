@@ -3,9 +3,9 @@
 <section class="player-stats">
   <h3 class="player-stats__title">Statistieken</h3>
   <div>
-    {{- statBlock(player.participated, 'Aanwezigheid') -}}
+    {{- statBlock(player.participationMatches, 'Aanwezigheid wedstrijd') -}}
+    {{- statBlock(player.participationTraining, 'Aanwezigheid training') -}}
     {{- statBlock(player.goals, 'Doelpunten') -}}
-    {{- statBlock(player.ratio, 'Ratio') -}}
     {{- statBlock(player.beerCardDonations, 'Bierpas') -}}
   </div>
 </section>
