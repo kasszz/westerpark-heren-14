@@ -1,0 +1,7 @@
+@import '../core/core.css';
+
+.add-match-button {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+}

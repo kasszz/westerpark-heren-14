@@ -21,11 +21,34 @@ a {
   color: var(--font-primary-color);
   font-weight: 800;
   text-decoration: none;
+  transition: 200ms color ease-out;
 }
 
 a:hover,
 a:focus {
   color: var(--primary-color);
+}
+
+.btn {
+  display: block;
+  padding: 12px;
+  border: 1px solid var(--font-primary-color);
+  color: var(--font-primary-color);
+  background-color: var(--background-color);
+  transition: 200ms border-color ease-out,
+              200ms color ease-out;
+}
+
+.btn:hover,
+.btn:focus {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+[disabled] {
+  pointer-events: none;
+  color: var(--disabled-color);
+  border-color: var(--disabled-color);
 }
 
 .a11y-only {

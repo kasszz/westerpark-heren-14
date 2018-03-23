@@ -30,7 +30,5 @@ function enhanceWithin (context) {
 }
 
 export default {
-  enhance,
-  enhanceWithin,
-  isSupported
+  enhanceWithin
 }
