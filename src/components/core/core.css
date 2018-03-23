@@ -21,7 +21,7 @@ a {
   color: var(--font-primary-color);
   font-weight: 800;
   text-decoration: none;
-  transition: 200ms all ease-out;
+  transition: 200ms color ease-out;
 }
 
 a:hover,
@@ -34,7 +34,9 @@ a:focus {
   padding: 12px;
   border: 1px solid var(--font-primary-color);
   color: var(--font-primary-color);
-  transition: 200ms all ease-out;
+  background-color: var(--background-color);
+  transition: 200ms border-color ease-out,
+              200ms color ease-out;
 }
 
 .btn:hover,
