@@ -4,9 +4,11 @@
   --color-rolling-stone: #7D7F80;
   --color-white: #FFFFFF;
   --color-shamrock: #2ECC71;
+  --color-emperor: #545454;
 
   --background-color: var(--color-shark);
   --border-color: var(--color-river-bed);
+  --disabled-color: var(--color-emperor);
   --primary-color: var(--color-shamrock);
   --font-primary-color: var(--color-white);
   --font-secondary-color: var(--color-rolling-stone);
