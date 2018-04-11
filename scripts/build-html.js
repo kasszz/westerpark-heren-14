@@ -33,8 +33,7 @@ function renderAll (data) {
     renderPlayerList(data),
     renderPlayers(data),
     renderMatchesOverview(data),
-    renderMatches(data),
-    renderAddMatch(data)
+    renderMatches(data)
   ])
   .then(() => console.log(chalk.green(`✓ HTML pages saved to ${path.relative(rootDir, outputDir)}/`)))
   .catch(err => console.log(chalk.red(`✘ HTML render error\n`, err)))
@@ -65,24 +64,19 @@ function renderMatches (data) {
   }))
 }
 
-function renderAddMatch (data) {
-  return renderViewToFile('add-match', data, 'matches', 'add')
-}
-
 function matchSlugFormatter (match) {
-  return path.join('matches', dateFormatter(match.date), slugFormatter(match.opponent))
+  return path.join('matches', dateFormatter(match.date), slugFormatter(match.opponent.title))
 }
 
-function renderViewToFile(view, data, slug, name) {
+function renderViewToFile(view, data, slug) {
   const baseUrl = slug ? `${path.relative(slug, './')}/` : './'
   const dirName = slug ? slug + '/' : ''
   const urlLevels = slug ? slug.split('/') : []
-  const filename = name ? name : 'index'
 
   Object.assign(data, { baseUrl, urlLevels })
 
   return renderView(view, data)
-    .then(html => fse.outputFile(`${outputDir}/${dirName}${filename}.html`, html))
+    .then(html => fse.outputFile(`${outputDir}/${dirName}index.html`, html))
 }
 
 function renderView (view, data) {

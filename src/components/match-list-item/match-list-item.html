@@ -1,9 +1,9 @@
 {% from '../match-score/match-score.html' import matchScore %}
 
 {% macro matchListItem(match) %}
-<a class="match-list-item" href="./{{ match.date | dateFormatter }}/{{ match.opponent | slugFormatter }}">
+<a class="match-list-item" href="./{{ match.date | dateFormatter }}/{{ match.opponent.title | slugFormatter }}">
   <div class="match-list-item__meta">
-    <h3 class="match-list-item__title">{{match.opponent}}</h3>
+    <h3 class="match-list-item__title">{{match.opponent.title}}</h3>
     <span class="match-list-item__date">{{match.date | dateFormatter}}</span>
   </div>
   <div class="match-list-item__container">

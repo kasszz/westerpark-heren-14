@@ -2,6 +2,6 @@
 {% from '../components/match-summary/match-summary.html' import matchSummary %}
 
 {% block content %}
-<h2 class="a11y-only">Wedstrijd tegen {{ match.opponent }}</h2>
+<h2 class="a11y-only">Wedstrijd tegen {{ match.opponent.title }}</h2>
 {{ matchSummary(match) }}
 {% endblock %}
