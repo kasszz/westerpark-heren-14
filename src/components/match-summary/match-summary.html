@@ -27,13 +27,16 @@
   <li class="scorer-list__item {% if awayGame %} scorer-list__item--away-team {% endif %}">
     <a class="scorer-list__item-link {% if awayGame %} scorer-list__item-link--away-team {% endif %}" href="/players/{{item.player.slug}}">
       {{ item.player.name | fullName }}
-      <span class="scorer-list__time {% if awayGame %} scorer-list__time--away-team {% endif %}">'{{ item.time }}</span>
     </a>
+    {% if item.assist %}
+    <a class="scorer-list__item-assist {% if awayGame %} scorer-list__item-assist--away-team {% endif %}" href="/players/{{item.assist.slug}}">
+      {{ item.assist.name | fullName }}
+    </a>
+    {% endif %}
   </li>
   {% else %}
   <li class="scorer-list__item {% if not awayGame %} scorer-list__item--away-team {% endif %}">
     Tegenstander
-    <span class="scorer-list__time {% if not awayGame %} scorer-list__time--away-team {% endif %}">'{{ item.time }}</span>
   </li>
   {% endif %}
 {% endfor %}

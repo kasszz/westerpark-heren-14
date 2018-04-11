@@ -33,16 +33,10 @@
   padding-left: 24px;
 }
 
-.scorer-list__time {
-  position: absolute;
-  top: 16px;
-  right: 16px;
+.scorer-list__item-assist {
+  display: block;
+  margin-top: 4px;
   color: var(--font-secondary-color);
-}
-
-.scorer-list__time--away-team {
-  right: auto;
-  left: 16px;
 }
 
 .match-summary__player-list {
