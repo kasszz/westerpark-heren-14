@@ -1,4 +1,5 @@
 import chartist from 'chartist'
+import legend from 'chartist-plugin-legend'
 import listElements from '../../lib/list-elements'
 
 const selector = '[data-graph]'
@@ -13,10 +14,15 @@ function enhance (element) {
   const data = JSON.parse(script.innerHTML)
   const options = JSON.parse(script.getAttribute(optionsAttr))
 
-  Object.assign(options, {height: 400})
+  Object.assign(options, {
+    height: 400,
+    plugins: [
+      legend({clickable: false})
+    ]
+  })
 
   if(type === 'bar') {
-    var chart = new chartist.Bar(element, data, options)
+    return new chartist.Bar(element, data, options)
   }
 }
 

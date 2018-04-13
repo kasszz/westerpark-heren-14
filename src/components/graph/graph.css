@@ -7,6 +7,7 @@
 
 .ct-label {
   color: var(--font-primary-color);
+  word-break: break-all;
 }
 
 .ct-grid {
@@ -24,3 +25,4 @@
 .ct-series-b .ct-bar {
   stroke: var(--primary-color-darken);
 }
+

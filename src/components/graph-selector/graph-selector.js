@@ -1,15 +1,15 @@
+import graph from '../graph/graph'
 import listElements from '../../lib/list-elements'
 
 const selector = '[data-graph-selector]'
 const selectSelector = '[data-graph-select]'
-const graphSelector = '[data-graph]'
 const graphTitleAttr = 'data-graph-title'
 const hideClass = 'graph--hidden'
 const isSupported = document.documentElement.classList && document.querySelectorAll
 
 function enhance (element) {
+  const graphs = graph.enhanceWithin(element)
   const select = element.querySelector(selectSelector)
-  const graphs = listElements(element, graphSelector)
 
   showSelectedGraph(select.value, graphs)
 
@@ -18,10 +18,12 @@ function enhance (element) {
 
 function showSelectedGraph (selectedGraph, graphs) {
   graphs.forEach(graph => {
-    if (graph.getAttribute(graphTitleAttr) === selectedGraph) {
-      graph.classList.remove(hideClass)
+    const element = graph.container
+    if (element.getAttribute(graphTitleAttr) === selectedGraph) {
+      element.classList.remove(hideClass)
+      graph.update()
     } else {
-      graph.classList.add(hideClass)
+      element.classList.add(hideClass)
     }
   })
 }

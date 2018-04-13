@@ -21,6 +21,7 @@ env.addFilter('fullName', nameFormatter.fullName)
 env.addFilter('firstName', nameFormatter.firstName)
 env.addFilter('surname', nameFormatter.surname)
 env.addFilter('initials', nameFormatter.initials)
+env.addFilter('criminalName', nameFormatter.criminalName)
 env.addFilter('dateFormatter', dateFormatter)
 env.addFilter('slugFormatter', slugFormatter)
 
