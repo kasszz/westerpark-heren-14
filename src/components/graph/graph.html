@@ -1,0 +1,8 @@
+{% macro graph(type, title, data, options) %}
+<div class="graph ct-chart" data-graph data-graph-title="{{ title }}">
+  <h3 class="a11y-only">{{ title }}</h3>
+  <script type="application/json"  data-graph-dataset data-graph-type="{{ type }}" data-graph-options='{{ options | dump | safe }}'>
+    {{ data | dump | safe }}
+  </script>
+</div>
+{% endmacro %}

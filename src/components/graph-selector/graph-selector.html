@@ -1,0 +1,14 @@
+{% from '../graph/graph.html' import graph %}
+
+<div class="graph-selector" data-graph-selector>
+  <select class="graph-selector__select" data-graph-select>
+    {% for graphData in graphs %}
+      <option value="{{ graphData.title }}">{{ graphData.title }}</option>
+    {% endfor %}
+  </select>
+  <div class="graph-selector__container" data-graph-container>
+    {% for graphData in graphs %}
+      {{ graph(graphData.type, graphData.title, graphData.data, graphData.options) }}
+    {% endfor %}
+  </div>
+</div>

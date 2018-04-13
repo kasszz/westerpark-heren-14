@@ -3,6 +3,7 @@ const fse = require('fs-extra')
 const path = require('path')
 const nunjucks = require('nunjucks')
 const dataLoader = require('../lib/data-loader')
+const graphDataLoader = require('../lib/graph-data-loader')
 const dateFormatter = require('../lib/date-formatter')
 const nameFormatter = require('../lib/name-formatter')
 const slugFormatter = require('../lib/slug-formatter')
@@ -20,6 +21,7 @@ env.addFilter('fullName', nameFormatter.fullName)
 env.addFilter('firstName', nameFormatter.firstName)
 env.addFilter('surname', nameFormatter.surname)
 env.addFilter('initials', nameFormatter.initials)
+env.addFilter('criminalName', nameFormatter.criminalName)
 env.addFilter('dateFormatter', dateFormatter)
 env.addFilter('slugFormatter', slugFormatter)
 
@@ -40,7 +42,8 @@ function renderAll (data) {
 }
 
 function renderHome (data) {
-  return renderViewToFile('home', data)
+  Object.assign(data, {graphs: graphDataLoader.load(data)})
+  renderViewToFile('home', data)
 }
 
 function renderPlayerList (data) {

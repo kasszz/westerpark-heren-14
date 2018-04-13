@@ -2,6 +2,8 @@
 @import './components/icon/icon.css';
 @import './components/site-header/site-header.css';
 @import './components/site-menu/site-menu.css';
+@import './components/graph-selector/graph-selector.css';
+@import './components/graph/graph.css';
 @import './components/player-list-item/player-list-item.css';
 @import './components/player-avatar/player-avatar.css';
 @import './components/player-birthday/player-birthday.css';

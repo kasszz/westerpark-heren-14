@@ -1,0 +1,14 @@
+.graph-selector {
+  padding: 16px;
+}
+
+.graph-selector__select {
+  display: block;
+  margin-right: auto;
+  margin-bottom: 16px;
+  margin-left: auto;
+  padding: 4px 8px;
+  background: var(--background-color);
+  color: var(--font-primary-color);
+  border-color: var(--font-primary-color);
+}
