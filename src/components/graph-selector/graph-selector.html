@@ -1,7 +1,7 @@
 {% from '../graph/graph.html' import graph %}
 
 <div class="graph-selector" data-graph-selector>
-  <select data-graph-select>
+  <select class="graph-selector__select" data-graph-select>
     {% for graphData in graphs %}
       <option value="{{ graphData.title }}">{{ graphData.title }}</option>
     {% endfor %}
