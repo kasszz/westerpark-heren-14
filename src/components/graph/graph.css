@@ -1,0 +1,26 @@
+@import '../../../node_modules/chartist/dist/chartist.css';
+@import '../core/core.css';
+
+.graph--hidden {
+  display: none;
+}
+
+.ct-label {
+  color: var(--font-primary-color);
+}
+
+.ct-grid {
+  stroke: var(--border-color);
+}
+
+.ct-bar {
+  stroke-width: 15px;
+}
+
+.ct-series-a .ct-bar {
+  stroke: var(--primary-color);
+}
+
+.ct-series-b .ct-bar {
+  stroke: var(--primary-color-darken);
+}
