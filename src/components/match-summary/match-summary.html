@@ -23,7 +23,11 @@
 {% macro scorerList(goals, awayGame) %}
 <ul class="scorer-list">
 {% for item in goals %}
-  {% if item.player %}
+  {% if item.counterGoal %}
+  <li class="scorer-list__item {% if not awayGame %} scorer-list__item--away-team {% endif %}">
+    Tegenstander
+  </li>
+  {% else %}
   <li class="scorer-list__item {% if awayGame %} scorer-list__item--away-team {% endif %}">
     <a class="scorer-list__item-link {% if awayGame %} scorer-list__item-link--away-team {% endif %}" href="/players/{{item.player.slug}}">
       {{ item.player.name | fullName }}
@@ -33,10 +37,6 @@
       {{ item.assist.name | fullName }}
     </a>
     {% endif %}
-  </li>
-  {% else %}
-  <li class="scorer-list__item {% if not awayGame %} scorer-list__item--away-team {% endif %}">
-    Tegenstander
   </li>
   {% endif %}
 {% endfor %}
