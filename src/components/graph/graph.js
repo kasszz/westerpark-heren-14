@@ -15,7 +15,7 @@ function enhance (element) {
   const options = JSON.parse(script.getAttribute(optionsAttr))
 
   Object.assign(options, {
-    height: 400,
+    height: 450,
     plugins: [
       legend({clickable: false})
     ]
